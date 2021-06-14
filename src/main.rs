@@ -15,11 +15,11 @@ struct Opt {
 
     /// Define the amount of ids that seperate each generated identifier.
     #[structopt(long, default_value = "1")]
-    id_step_by: usize,
+    id_step_by: u64,
 
     /// Define the first identifier that must be generated.
     #[structopt(long, default_value = "0")]
-    id_start_at: usize,
+    id_start_at: u64,
 }
 
 fn main() -> anyhow::Result<()> {
