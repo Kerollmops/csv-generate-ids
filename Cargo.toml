@@ -1,0 +1,14 @@
+[package]
+name = "csv-generate-ids"
+description = "A simple tool to generate unique sequential identifiers"
+version = "0.1.0"
+edition = "2018"
+authors = ["Kerollmops <renault.cle@gmail.com>"]
+repository = "https://github.com/Kerollmops/csv2ndjson-lite"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+anyhow = "1.0.41"
+csv = "1.1.6"
+structopt = "0.3.21"
