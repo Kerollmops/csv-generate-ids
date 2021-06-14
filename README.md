@@ -31,8 +31,7 @@ Yeah Kid!,Knockin' Boots (Vol 2 Of 2),Mr. James Barth & A.D.,Electronic,Sweden,1
 If you want to output an array when CSV values are comma separated, specify those headers as arguments.
 
 ```bash
-cat data.csv | csv-generate-ids --id-step-by 2 --id-start-at 6 --id-field-
-name ObjectID
+cat data.csv | csv-generate-ids --id-step-by 2 --id-start-at 6 --id-field-name ObjectID
 ```
 
 The output of the previous command would be something like so.
