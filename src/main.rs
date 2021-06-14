@@ -1,6 +1,7 @@
 use std::io;
 use std::iter::once;
 
+use anyhow::bail;
 use structopt::StructOpt;
 
 #[derive(Debug, StructOpt)]
@@ -38,7 +39,10 @@ fn main() -> anyhow::Result<()> {
         let values = once(id.as_str()).chain(record.iter());
         wtr.write_record(values)?;
 
-        record_id += opt.id_step_by;
+        match record_id.checked_add(opt.id_step_by) {
+            Some(id) => record_id = id,
+            None => bail!("could not generate the next id, value overflow"),
+        }
     }
 
     Ok(())
